@@ -12,32 +12,52 @@ import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 import DevicesRoundedIcon from '@mui/icons-material/DevicesRounded';
 import EdgesensorHighRoundedIcon from '@mui/icons-material/EdgesensorHighRounded';
 import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
-
+import CellTowerIcon from '@mui/icons-material/CellTower';
+import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
+import BackupIcon from '@mui/icons-material/Backup';
+import EqualizerIcon from '@mui/icons-material/Equalizer';
 const items = [
   {
-    icon: <ViewQuiltRoundedIcon />,
-    title: 'Dashboard',
+    icon: <PrecisionManufacturingIcon />,
+    title: 'Make Machine Smarter',
     description:
       'This item could provide a snapshot of the most important metrics or data points related to the product.',
     imageLight: 'url("/static/images/templates/templates-images/dash-light.png")',
     imageDark: 'url("/static/images/templates/templates-images/dash-dark.png")',
   },
   {
-    icon: <EdgesensorHighRoundedIcon />,
-    title: 'Mobile integration',
+    icon: <CellTowerIcon />,
+    title: 'Design And Implement Smart Connectivity For Plants And Machines',
     description:
       'This item could provide information about the mobile app version of the product.',
     imageLight: 'url("/static/images/templates/templates-images/mobile-light.png")',
     imageDark: 'url("/static/images/templates/templates-images/mobile-dark.png")',
   },
   {
-    icon: <DevicesRoundedIcon />,
-    title: 'Available on all platforms',
+    icon: <BackupIcon />,
+    title: 'Design And Implement Smart Data Management For Real Time Manufacturing',
     description:
       'This item could let users know the product is available on all platforms, such as web, mobile, and desktop.',
     imageLight: 'url("/static/images/templates/templates-images/devices-light.png")',
     imageDark: 'url("/static/images/templates/templates-images/devices-dark.png")',
   },
+  {
+    icon: <DevicesRoundedIcon />,
+    title: 'Develop And Implement Smart Application',
+    description:
+      'This item could let users know the product is available on all platforms, such as web, mobile, and desktop.',
+    imageLight: 'url("/static/images/templates/templates-images/devices-light.png")',
+    imageDark: 'url("/static/images/templates/templates-images/devices-dark.png")',
+  },
+  {
+    icon: <EqualizerIcon />,
+    title: 'Create Smart And Outcome Based Analytics',
+    description:
+      'This item could let users know the product is available on all platforms, such as web, mobile, and desktop.',
+    imageLight: 'url("/static/images/templates/templates-images/devices-light.png")',
+    imageDark: 'url("/static/images/templates/templates-images/devices-dark.png")',
+  },
+  
 ];
 
 export default function Features() {
@@ -52,22 +72,21 @@ export default function Features() {
   return (
     <Container id="features" sx={{ py: { xs: 8, sm: 16 } }}>
       <Grid container spacing={6}>
-        <Grid item xs={12} md={6}>
-          <div>
+        <Grid item xs={12} md={6} >
+          <div style={{backgroundColor:'white'}}>
             <Typography component="h2" variant="h4" color="text.primary">
-              Product features
+            Capabilities and features
             </Typography>
             <Typography
               variant="body1"
               color="text.secondary"
               sx={{ mb: { xs: 2, sm: 4 } }}
             >
-              Here you can provide a brief overview of the key features of the
-              product. For example, you could list the number of features, the types
-              of features, add-ons, or the benefits of the features.
+          Smart manufacturing is expected to handle the following key indicators and aspects of manufacturing.Scalability,Flexibility,Agility,Safety and Sustainability
             </Typography>
           </div>
-          <Grid container item gap={1} sx={{ display: { xs: 'auto', sm: 'none' } }}>
+       <Box>
+         <Grid container item gap={1} sx={{ display: { xs: 'auto', sm: 'none' } }}>
             {items.map(({ title }, index) => (
               <Chip
                 key={index}
@@ -94,6 +113,7 @@ export default function Features() {
               />
             ))}
           </Grid>
+       </Box>
           <Box
             component={Card}
             variant="outlined"
@@ -139,13 +159,16 @@ export default function Features() {
               </Link>
             </Box>
           </Box>
-          <Stack
+      <Box sx={{ maxHeight: 400, overflowY: 'auto' }}>
+      <Stack
             direction="column"
             justifyContent="center"
             alignItems="flex-start"
             spacing={2}
             useFlexGap
-            sx={{ width: '100%', display: { xs: 'none', sm: 'flex' } }}
+            sx={{ width: '100%', display: { xs: 'none', sm: 'flex' } ,
+           
+          }}
           >
             {items.map(({ icon, title, description }, index) => (
               <Card
@@ -236,13 +259,17 @@ export default function Features() {
               </Card>
             ))}
           </Stack>
+      </Box>
         </Grid>
+        {/* ----------------write side card of feature--- */}
         <Grid
           item
           xs={12}
           md={6}
-          sx={{ display: { xs: 'none', sm: 'flex' }, width: '100%' }}
+          sx={{ display: { xs: 'none', sm: 'flex'}, width: '100%' }}
         >
+
+          {/* ------------inside card of right side card-----------  */}
           <Card
             variant="outlined"
             sx={{
@@ -250,8 +277,10 @@ export default function Features() {
               width: '100%',
               display: { xs: 'none', sm: 'flex' },
               pointerEvents: 'none',
+             // backgroundColor:'green'
             }}
           >
+            {/* -----------------third inside card ---- */}
             <Box
               sx={{
                 m: 'auto',
@@ -262,7 +291,9 @@ export default function Features() {
                   theme.palette.mode === 'light'
                     ? items[selectedItemIndex].imageLight
                     : items[selectedItemIndex].imageDark,
+               
               }}
+
             />
           </Card>
         </Grid>
