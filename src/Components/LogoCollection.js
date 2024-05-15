@@ -59,6 +59,7 @@ export default function LogoCollection() {
         variant="subtitle2"
         align="center"
         color="text.secondary"
+        marginTop="-40px"
       >
         Trusted by the best companies
       </Typography>
