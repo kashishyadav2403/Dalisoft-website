@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
+import Automation_Img from '../Images/Dalisoft Logo (1).jpg';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import IconButton from '@mui/material/IconButton';
@@ -57,13 +58,14 @@ export default function Footer() {
         >
           <Box sx={{ width: { xs: '100%', sm: '60%' } }}>
             <Box sx={{ ml: '-15px' }}>
-              <img
+              {/* <img
                 src={
                   'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e6faf73568658154dae_SitemarkDefault.svg'
                 }
                 style={logoStyle}
                 alt="logo of sitemark"
-              />
+              /> */}
+               <img src={Automation_Img} style={logoStyle} alt="Automation Technology" />
             </Box>
             <Typography variant="body2" fontWeight={600} gutterBottom>
               Newsletter
@@ -111,7 +113,7 @@ export default function Footer() {
             Highlights
           </Link>
           <Link color="text.secondary" href="#">
-            Pricing
+            ContactUs
           </Link>
           <Link color="text.secondary" href="#">
             FAQs
@@ -131,7 +133,7 @@ export default function Footer() {
             About us
           </Link>
           <Link color="text.secondary" href="#">
-            Careers
+            Industry
           </Link>
           <Link color="text.secondary" href="#">
             Press
@@ -207,7 +209,7 @@ export default function Footer() {
           </IconButton>
           <IconButton
             color="inherit"
-            href="https://www.linkedin.com/company/mui/"
+            href="https://www.linkedin.com/company/dalisoft-technologies-pvt-ltd/mycompany/"
             aria-label="LinkedIn"
             sx={{ alignSelf: 'center' }}
           >
